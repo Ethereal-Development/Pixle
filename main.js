@@ -1,4 +1,6 @@
 // GLOBAL VARIABLES
+let pixle = "plane"
+
 let sampleSize = 65;
 let increment = 13;
 
@@ -13,6 +15,8 @@ let imgCount = 0;
 
 let imgHolder = document.getElementById("holder")
 
+let rowspot = 1;
+let doesWordWork;
 // PIXELATE CODE
 function makeImage() {
   let c = document.createElement("canvas");
@@ -100,27 +104,81 @@ function understandGuess() {
     guessArr.push(document.getElementById("gl" + commonSplit[2] + "5").innerHTML)
 
     guess = guessArr.join("")
-    console.log(guess)
+    if(guess.length === 5){
+      doesWordWork = true;
+    }else{
+      doesWordWork = false;
+    }
 }
 
-
-
+function check(row, guess){
+  let commonId = "glxx"
+  let commonSplit = commonId.split("");
+  commonSplit[2] = row.toString();;
+  if(guess.toUpperCase() !== pixle.toUpperCase()){
+    for(let i = 1; i < 6; i++){
+      commonSplit[3] = i;
+      let Id = commonSplit.join("");
+      console.log(Id);
+      document.getElementById(Id).style.backgroundColor = "red";
+    }
+  }else{
+    for(let i = 1; i < 6; i++){
+      commonSplit[3] = i;
+      let Id = commonSplit.join("");
+      document.getElementById(Id).style.backgroundColor = "green";
+    }
+  }
+  rowspot++
+}
 
 //
 function submit() {
   understandGuess();
-  imgCount++;
-  if(guess.toLowerCase() === "plane"){
-      console.log('correct');
-      
-      sampleSize = 1;
-      makeImage()
+  console.log(guess);
+  if(doesWordWork === true){ 
+    imgCount++;
+    if(guess === pixle.toUpperCase()){
+        check(rowspot, guess)
+        console.log('correct');
+        sampleSize = 1;
+        makeImage()
+    } else {
+        console.log('incorrect');
+        check(rowspot, guess)
+        sampleSize -= increment
+        makeImage();
+    }
+    commonSplit[2]++
+    commonSplit[3] = 1
   } else {
-      console.log('wrong');
-
-      sampleSize -= increment
-      makeImage();
+    console.log("Guess does not work.");
   }
-  commonSplit[2]++
-  commonSplit[3] = 1
 }
+
+// For GREEN, YELLOW, GREY (THIS IS MORE LIKE WORDLE) just switch out check function
+/*
+function check(row){
+  let commonId = "glxx"
+  let commonSplit = commonId.split("");
+  commonSplit[2] = row.toString();;
+  for(let i = 1; i < 6; i++){
+      commonSplit[3] = i
+      let Id = commonSplit.join("")
+      let positionOfGuessLetter = i;
+      let correctWordLetterPosition = pixle.toUpperCase().indexOf(document.getElementById(Id).innerHTML) + 1;
+      console.log(document.getElementById(Id).innerHTML)
+      if(pixle.toUpperCase().includes(document.getElementById(Id).innerHTML) && correctWordLetterPosition === positionOfGuessLetter){
+        console.log("GREEN")
+        document.getElementById(Id).style.backgroundColor = "green";
+      } else if(pixle.toUpperCase().includes(document.getElementById(Id).innerHTML) && correctWordLetterPosition !== positionOfGuessLetter){
+        console.log("YELLOW")
+        document.getElementById(Id).style.backgroundColor = "yellow";
+      } else {
+        console.log("GREY")
+        document.getElementById(Id).style.backgroundColor = "grey";
+      }
+  }
+  rowspot++
+}
+*/
