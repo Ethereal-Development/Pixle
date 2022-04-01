@@ -17,6 +17,12 @@ let imgHolder = document.getElementById("holder")
 
 let rowspot = 1;
 let doesWordWork;
+
+let correctText = document.getElementById("guessedCorrect")
+let invalidGuessText = document.getElementById("invalidGuess")
+let shortGuessText = document.getElementById("shortGuess")
+let ranOutText = document.getElementById("ranOut")
+
 // PIXELATE CODE
 function makeImage() {
   let c = document.createElement("canvas");
@@ -108,9 +114,13 @@ function understandGuess() {
       doesWordWork = true;
     }else{
       doesWordWork = false;
+      shortGuessText.style.display = "initial"
+      setTimeout(() => shortGuessText.style.display = 'none', 2000)
+
     }
 }
 
+// FOR PURELY RED OR GREEN DEPENDING ON RIGHT OR WRONG
 function check(row, guess){
   let commonId = "glxx"
   let commonSplit = commonId.split("");
@@ -132,7 +142,6 @@ function check(row, guess){
   rowspot++
 }
 
-//
 function submit() {
   understandGuess();
   console.log(guess);
@@ -142,6 +151,10 @@ function submit() {
         check(rowspot, guess)
         console.log('correct');
         sampleSize = 1;
+        // correctText.style.visibility = 'visible'
+          // setTimeout(() => correctText.style.visibility = 'hidden', 5000)
+        correctText.style.display = 'initial'
+          setTimeout(() => correctText.style.display = "none", 2000)
         makeImage()
     } else {
         console.log('incorrect');
@@ -158,7 +171,7 @@ function submit() {
 
 // For GREEN, YELLOW, GREY (THIS IS MORE LIKE WORDLE) just switch out check function
 /*
-function check(row){
+function check(row, guess){
   let commonId = "glxx"
   let commonSplit = commonId.split("");
   commonSplit[2] = row.toString();;
@@ -182,3 +195,5 @@ function check(row){
   rowspot++
 }
 */
+
+//

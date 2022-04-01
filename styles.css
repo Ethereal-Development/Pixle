@@ -12,12 +12,16 @@ hr {
   text-align: center;
 }
 
+#holder {
+  height: 0px;
+}
+
 grid {
   display: grid;
   align-items: center;
   justify-content: center;
   grid-template-columns: 140px 140px 140px 140px 140px;
-  gap: px;
+  /* gap: px; */
   margin-top: 50px;
 }
 
@@ -52,10 +56,11 @@ grid {
 #VirtualKeys {
   user-select: none;
   text-align: center;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .key{
@@ -75,5 +80,32 @@ grid {
 #Pixelated{
   width: 10px;
   height: 50px;
+}
+
+#popupContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  top: 375px;
+  position: absolute;
+} 
+
+#guessedCorrect, #shortGuess, #invalidGuess, #ranOut {
+  display: none;
+}
+
+.popupText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2.5px solid rgb(145, 143, 143);
+  background-color: rgb(255, 255, 255);
+  font-family: 'Arial';
+  font-size: 40px;
+  font-style: oblique;
 }
 

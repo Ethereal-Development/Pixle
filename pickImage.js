@@ -14,19 +14,18 @@
 
 
 
-    // setInterval(() => {
-    //     let d = new Date()
-    //     let timeMilli = (d.getTime() - 1647187200000)/(1000*60*60);
+    setInterval(() => {
+        let d = new Date()
+        let timeMilli = 24.016666667 - (d.getTime() - 1648699200000)/(1000*60*60);
+        let hour = parseInt(timeMilli);
+        let minutes = Math.floor((timeMilli - parseInt(timeMilli)) *60)
+        let timeUntilNextPixle = `There are ${hour} hours and ${minutes} minutes until the next PIXLE.`;
+        console.log(timeUntilNextPixle);
 
-    //     //adam
-    //     let time = `${parseInt(timeMilli)}:${Math.floor((timeMilli - parseInt(timeMilli)) *60)}pm`;
-    //     console.log(timeMilli)
-    //     console.log(time)
-
-    //     //avi
-    //     let parsed = ((d.getTime() - 1647187200000)/(1000*60*60) + "").split(".")
-    //     console.log(parsed[1]*60)
-    //     console.log(parsed[0]+":"+(Math.floor((parsed[1].slice(0, 6)/1000000)*60)))
-    // }, 5000);
+        // //avi
+        // let parsed = ((d.getTime() - 1648684800000)/(1000*60*60) + "").split(".")
+        // console.log(parsed[1]*60)
+        // console.log(parsed[0]+":"+(Math.floor((parsed[1].slice(0, 6)/1000000)*60)))
+    }, 5000);
 
     
