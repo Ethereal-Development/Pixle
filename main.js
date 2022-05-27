@@ -56,6 +56,10 @@ function makeImage() {
         img2.width = 750;
         img2.setAttribute('id', ("newImg" + imgCount))
         console.log(imgCount)
+        img2.style.position = 'fixed';
+        img2.style.bottom = "350px";
+        img2.style.left =  "50%";
+        img2.style.transform = "translate(-50%, 0%)";
 
         document.body.appendChild(img2);
         // imgCount++;
