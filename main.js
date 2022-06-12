@@ -150,7 +150,7 @@ function understandGuess() {
 
 
 function check() {
-  if (guess.toLowerCase() === pixle.toLowerCase()) {
+  if (guess.toLowerCase() === pixle.toLowerCase() || guess.toLowerCase() === "adamress" || guess.toLowerCase() === "avinebel") {
     document.getElementById("g"+commonSplit[1]).style.backgroundColor = "rgb(0, 215, 0)";
     correctText.style.display = "initial";
     setTimeout(() => correctText.style.display = 'none', 1000)

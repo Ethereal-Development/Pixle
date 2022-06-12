@@ -172,10 +172,18 @@ hr {
 }
 
 #guessedCorrect {
-  width: 900px;
+  /* width: 900px;
   height: 90px;
-  
-  background-color: white;
+  font-family: 'Trebuchet MS';
+  font-weight: bolder;
+  font-size: 35pt;
+  background-color: white; */
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: 30pt;
+  color: white;
+  background-color: rgb(180, 180, 180);
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .popupText {
