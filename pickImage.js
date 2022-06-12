@@ -11,21 +11,23 @@
 
 
 // document.getElementById("Pixelated").src = ""
-
-
-
     setInterval(() => {
-        let d = new Date()
-        let timeMilli = 24.016666667 - (d.getTime() - 1648699200000)/(1000*60*60);
-        let hour = parseInt(timeMilli);
-        let minutes = Math.floor((timeMilli - parseInt(timeMilli)) *60)
+        let date = new Date() //The current date
+        let time = date.getTime() //The amount of time in milliseconds from Jan 1, 1970 to current date
+        let baseTime = new Date('January 1, 22') //The date Jan 1, 22
+        newPixleTime = baseTime.getTime() //The amount of time in milliseconds from Jan 1, 1970 to Jan 1, 22
+
+        while((newPixleTime - time) < 0){
+            newPixleTime += 86400000 //Keeps adding one day of milliseconds until it gets to current day
+        }
+
+        let timeMilli = (newPixleTime - time)/(1000*60*60);
+
+        let hour = parseInt(timeMilli) -1;
+        let minutes = Math.floor((timeMilli - parseInt(timeMilli)) *60) + 1
+
         let timeUntilNextPixle = `There are ${hour} hours and ${minutes} minutes until the next PIXLE.`;
         console.log(timeUntilNextPixle);
-
-        // //avi
-        // let parsed = ((d.getTime() - 1648684800000)/(1000*60*60) + "").split(".")
-        // console.log(parsed[1]*60)
-        // console.log(parsed[0]+":"+(Math.floor((parsed[1].slice(0, 6)/1000000)*60)))
-    }, 5000);
+    }, 30000);
 
     
