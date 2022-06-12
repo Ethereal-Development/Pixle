@@ -56,11 +56,11 @@ function makeImage() {
 
         let img2 = new Image();
         img2.src = c.toDataURL("image/jpeg");
-        img2.width = 740;
+        img2.width = 370;
         img2.setAttribute('id', ("newImg" + imgCount))
         console.log(imgCount)
         img2.style.position = 'fixed';
-        img2.style.bottom = "387px";
+        img2.style.top = "170px";
         img2.style.left =  "50%";
         img2.style.transform = "translate(-50%, 0%)";
         img2.style.opacity = "var(--transparency)"
