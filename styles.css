@@ -246,7 +246,7 @@ hr {
   top: 175px;
   z-index: 1;
   background-color: white;
-  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 100px 20px rgba(0, 0, 0, 0.2);
 }
 
 #contactPopup {
