@@ -1,9 +1,3 @@
-@media (orientation: landscape){
-  * {
-    transform: rotate(90deg)
-  }
-}
-
 :root{
   --transparency: 1;
 }
