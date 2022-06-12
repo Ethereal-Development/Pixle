@@ -132,7 +132,6 @@ hr {
 
 #btnEnter{
   width: 125px;
-  background-color: rgb(0, 215, 0);
   color: white;
 }
 
@@ -200,7 +199,7 @@ hr {
 
 #contact {
   position: absolute;
-  left: 0px;
+  left: -20px;
   top: 20px;
   font-size: 55px;
 }
