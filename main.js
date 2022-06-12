@@ -13,6 +13,8 @@ let guess;
 
 let alreadyDone = false;
 
+let popupOpen = false;
+
 let imgCount = 0;
 
 let imgHolder = document.getElementById("holder")
@@ -63,7 +65,7 @@ function makeImage() {
         img2.style.top = "170px";
         img2.style.left =  "50%";
         img2.style.transform = "translate(-50%, 0%)";
-        img2.style.opacity = "var(--transparency)"
+        img2.style.opacity = "var(--transparency)";
 
         document.body.appendChild(img2);
         // imgCount++;
@@ -84,39 +86,43 @@ makeImage();
 
 // CODE FOR GUESSES
 function input(e) {
-  if (!alreadyDone) {
-    // var guessInput = document.getElementById("guess1");
-    // guessInput.value = guessInput.value + e.value;
+  if (!popupOpen) {
+      if (!alreadyDone) {
+        // var guessInput = document.getElementById("guess1");
+        // guessInput.value = guessInput.value + e.value;
 
-    parseInt(commonSplit[1])
-    document.getElementById("g" + commonSplit[1]).innerHTML += e.value;
+        parseInt(commonSplit[1])
+        document.getElementById("g" + commonSplit[1]).innerHTML += e.value;
 
 
-    //5 letters:
-    // parseInt(commonSplit[2])
-    // parseInt(commonSplit[3])
-    //document.getElementById("gl" + commonSplit[2] + commonSplit[3]).innerHTML = e.value;
-    //commonSplit[3]++;
+        //5 letters:
+        // parseInt(commonSplit[2])
+        // parseInt(commonSplit[3])
+        //document.getElementById("gl" + commonSplit[2] + commonSplit[3]).innerHTML = e.value;
+        //commonSplit[3]++;
 
-    // if (commonSplit[2] === "1") {
-        
-    // }
-  //  document.getElementById("gl11").innerHTML = e.value
-  }
+        // if (commonSplit[2] === "1") {
+            
+        // }
+      //  document.getElementById("gl11").innerHTML = e.value
+      }
+    }
 }
 
 function del() {
-  if (!alreadyDone) {
-    if (document.getElementById("g"+commonSplit[1]).innerHTML.length > 0) {
-      let guessedLetters = document.getElementById("g"+commonSplit[1]).innerHTML.split('');
-      guessedLetters.splice(guessedLetters.length-1, 1);
-      document.getElementById("g"+commonSplit[1]).innerHTML = guessedLetters.join("");
+  if (!popupOpen) {
+    if (!alreadyDone) {
+      if (document.getElementById("g"+commonSplit[1]).innerHTML.length > 0) {
+        let guessedLetters = document.getElementById("g"+commonSplit[1]).innerHTML.split('');
+        guessedLetters.splice(guessedLetters.length-1, 1);
+        document.getElementById("g"+commonSplit[1]).innerHTML = guessedLetters.join("");
+      }
+      //5 letters
+      // if (commonSplit[3] > 1) {
+      //     commonSplit[3]--;
+      //     document.getElementById("gl" + commonSplit[2] + commonSplit[3]).innerHTML=""
+      // }
     }
-    //5 letters
-    // if (commonSplit[3] > 1) {
-    //     commonSplit[3]--;
-    //     document.getElementById("gl" + commonSplit[2] + commonSplit[3]).innerHTML=""
-    // }
   }
 }
 
@@ -159,34 +165,48 @@ function check() {
 }
 
 function submit() {
-  if (!alreadyDone) {
-    if (document.getElementById("g"+commonSplit[1]).innerHTML.length > 0) {
-      understandGuess();
-      check();
-      commonSplit[1]++;
-    } else {
-      blankGuessText.style.display = "initial";
-      setTimeout(() => blankGuessText.style.display = 'none', 1000)
+  if (!popupOpen) {
+    if (!alreadyDone) {
+      if (document.getElementById("g"+commonSplit[1]).innerHTML.length > 0) {
+        understandGuess();
+        check();
+        commonSplit[1]++;
+      } else {
+        blankGuessText.style.display = "initial";
+        setTimeout(() => blankGuessText.style.display = 'none', 1000)
+      }
     }
   }
 }
 
 function contactPopup() {
-  document.getElementById("contactPopup").style.display = "initial"
-  let root = document.querySelector(":root")
-  root.style.setProperty("--transparency", 0.8)
+  if (!popupOpen)  {
+    document.getElementById("contactPopup").style.display = "initial"
+    let root = document.querySelector(":root")
+    root.style.setProperty("--transparency", 0.8)
+
+    popupOpen = true;
+  }
 }
 
 function creatorPopup() {
-  document.getElementById("creatorPopup").style.display = "initial"
-  let root = document.querySelector(":root")
-  root.style.setProperty("--transparency", 0.8)
+  if (!popupOpen) {
+    document.getElementById("creatorPopup").style.display = "initial"
+    let root = document.querySelector(":root")
+    root.style.setProperty("--transparency", 0.8)
+
+    popupOpen = true;
+  }
 }
 
 function howToPlayPopup() {
-  document.getElementById("howToPlayPopup").style.display = "initial"
-  let root = document.querySelector(":root")
-  root.style.setProperty("--transparency", 0.8)
+  if (!popupOpen) {
+    document.getElementById("howToPlayPopup").style.display = "initial"
+    let root = document.querySelector(":root")
+    root.style.setProperty("--transparency", 0.8)
+
+    popupOpen = true;
+  }
 }
 
 function xOut(x) {
@@ -194,6 +214,8 @@ function xOut(x) {
   document.getElementById(pID).style.display = "none"
   let root = document.querySelector(":root")
   root.style.setProperty("--transparency", 1)
+
+  popupOpen = false;
 }
 
 

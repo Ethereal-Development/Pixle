@@ -133,6 +133,7 @@ hr {
 #btnEnter{
   width: 125px;
   color: white;
+  background-color: #006CFF;
 }
 
 
@@ -173,6 +174,7 @@ hr {
 #guessedCorrect {
   width: 900px;
   height: 90px;
+  
   background-color: white;
 }
 
