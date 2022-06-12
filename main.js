@@ -1,5 +1,3 @@
-screen.orientation.lock()
-
 // GLOBAL VARIABLES
 let pixle = "rocket"
 
