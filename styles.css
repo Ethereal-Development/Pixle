@@ -249,7 +249,6 @@ hr {
   display: inline;
   font-size: 41px;
   width: 100px;
-  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -280,12 +279,13 @@ hr {
 #creatorPopup {
   width: 750px;
   height: 470px;
+  font-weight: 500;
 }
 
 #howToPlayPopup {
   width: 750px;
   height: 745px;
-  font-family:'Brush Script MT', cursive;
+  font-family:'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 .x-button {
@@ -294,7 +294,7 @@ hr {
 }
 
 #name{
-  font-family:'Brush Script MT', cursive;
+  font-family:'Comic Sans MS', 'Comic Sans', cursive;
   display: block;
   margin: 0 auto;
   font-size: 38px;
@@ -305,7 +305,7 @@ hr {
 }
 
 #email{
-  font-family:'Brush Script MT', cursive;
+  font-family:'Comic Sans MS', 'Comic Sans', cursive;
   display: block;
   margin: 0 auto;
   font-size: 33px;
@@ -317,7 +317,7 @@ hr {
 }
 
 #feedback{
-  font-family:'Brush Script MT', cursive;
+  font-family:'Comic Sans MS', 'Comic Sans', cursive;
   display: block;
   margin: 0 auto;
   font-size: 38px;
@@ -339,5 +339,5 @@ hr {
   color: white;
   border-radius: 25px;
   border: none;
-  box-shadow: 5px 7px 10px 0px rgb(145, 143, 143)
+  box-shadow: 3px 5px 10px 0px rgb(145, 143, 143)
 }
