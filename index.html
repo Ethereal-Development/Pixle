@@ -42,11 +42,17 @@
 
   <div id="infoPopups">
     <div id="contactPopup">
-      <h1>Contact Us</h1> <button class="x-button" onclick="xOut(this)"><i id="contactX" class="fa fa-times" aria-hidden="true"></i></button> 
-      <br>
-      <br>
-      <br>
-      <p>Feedback or questions? Email us here:</p>
+      <h1 style="margin-left: 20px;">Contact Us</h1> <button class="x-button" onclick="xOut(this)"><i id="contactX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <br><br><br>
+      <p style="margin-left: 40px;">Email your feedback and questions here:</p>
+      <br><br><br>
+      <textarea id="feedback" placeholder="Feedback or Questions here"></textarea>
+      <br><br>
+      <input type="text" id="name" placeholder="Name (Optional)">
+      <br><br>
+      <input type="email" id="email" placeholder="Email (Optional: so we can respond to you)">
+      <br><br><br><br>
+      <button onclick="sendEmail()" id="submit" type="button">Submit</button>
     </div>
 
     <div id="creatorPopup">
