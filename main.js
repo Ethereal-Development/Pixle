@@ -216,6 +216,16 @@ function xOut(x) {
   root.style.setProperty("--transparency", 1)
 
   popupOpen = false;
+
+  document.getElementById("feedback").style.display = "block";
+  document.getElementById("name").style.display = "block";
+  document.getElementById("email").style.display = "block";
+  document.getElementById("contactheader").style.display = "inline";
+  document.getElementById("submit").style.display = "block";
+  document.getElementById("header2contact").style.display = "inline";
+  document.getElementById("contactform").style.display = "block";
+  document.getElementById("thankyou").style.display = "none"
+  document.getElementById("thankyou2").style.display = "none"
 }
 
 
