@@ -68,8 +68,9 @@
 
         <button onclick="sendEmail()" id="submit" type="submit">Submit</button>
       </form> -->
-      <h1>Contact Us</h1> <button class="x-button" onclick="xOut(this)"><i id="contactX" class="fa fa-times" aria-hidden="true"></i></button> 
-      <form action="https://formsubmit.co/ardeasms@gmail.com" method="POST">
+
+      <h1 id="Contact">Contact Us</h1> <button class="x-button" onclick="xOut(this)"><i id="contactX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <form id="Contact" action="https://formsubmit.co/ardeasms@gmail.com" method="POST">
         <br><br><br>
 
         <p style="margin-left: 25px;">Send your feedback and questions here:</p>
@@ -92,9 +93,9 @@
         <input name="Email" type="email" id="email" placeholder="Email (Optional: so we can respond to you)">
         <br><br><br><br>
 
-        <button onclick="Testing()" id="submit" type="submit">Submit</button>
-          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        <button onclick="Thankyou()" id="submit" type="submit">Submit</button>
       </form>
+      <thankyou id="thankyou">Thank you for your feedback and or questions.</thankyou> <br><br><br><br><br><br> <h2 id="thankyou" style="font-size: 50px; margin: 0">It is very much appreciated</h2>
     </div>
 
     <div id="creatorPopup">

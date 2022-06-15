@@ -298,6 +298,7 @@ function check(row, guess){
 
 //
 
-const Testing = () => {
-  console.log("The function 'Testing' was just run.")
+const Thankyou = () => {
+  document.getElementById("Contact").style.display = "none";
+  document.getElementById("thankyou").style.display = "block"
 }

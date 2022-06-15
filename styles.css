@@ -342,3 +342,15 @@ hr {
   border: none;
   box-shadow: 3px 5px 10px 0px rgb(145, 143, 143)
 }
+
+#thankyou {
+  font-size: 80px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10%;
+  line-height: 1.5;
+  display: none;
+}
