@@ -297,3 +297,7 @@ function check(row, guess){
 */
 
 //
+
+const Testing = () => {
+  console.log("The function 'Testing' was just run.")
+}
