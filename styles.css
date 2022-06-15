@@ -354,3 +354,15 @@ hr {
   line-height: 1.5;
   display: none;
 }
+
+#thankyou2 {
+  font-size: 80px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10%;
+  line-height: 1.5;
+  display: none;
+}
