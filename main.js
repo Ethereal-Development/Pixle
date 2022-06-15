@@ -306,7 +306,6 @@ const Thankyou = () => {
   document.getElementById("submit").style.display = "none";
   document.getElementById("header2contact").style.display = "none";
   document.getElementById("contactform").style.display = "none";
-  document.getElementById("contactX").style.display = "none";
   document.getElementById("thankyou").style.display = "block"
   document.getElementById("thankyou2").style.display = "block"
 }
