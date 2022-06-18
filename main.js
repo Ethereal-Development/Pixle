@@ -8,6 +8,11 @@ const images = [
   },
   {
     "pixle": "Rocket",
+    "url": "./images/rocket.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": "Rocket",
     "url": "./images/rocket.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
@@ -106,11 +111,12 @@ function makeImage() {
 
         let img2 = new Image();
         img2.src = c.toDataURL("image/jpeg");
-        img2.width = 370;
+        img2.width = 350;
         img2.setAttribute('id', ("newImg" + imgCount))
         img2.style.position = 'fixed';
         img2.style.top = "170px";
         img2.style.left =  "50%";
+        img2.style.margin = "20px"
         img2.style.transform = "translate(-50%, 0%)";
         img2.style.opacity = "var(--transparency)";
 
@@ -404,6 +410,10 @@ setInterval(() => {
   let hour = parseInt(timeMilli) -1;
   let minutes = Math.floor((timeMilli - parseInt(timeMilli)) *60) + 1
 
+  if (minutes == 60){
+    minutes = 0;
+    hour++;
+  }
   let timeUntilNextPixle = `There are ${hour} hours and ${minutes} minutes until the next PIXLE.`;
   timeElement = document.getElementById("timeTillNext")
   timeElement.innerHTML = timeUntilNextPixle
