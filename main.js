@@ -2,13 +2,13 @@ let startingDay = "June 17, 22"
 
 const images = [
   {
-    "pixle": "Apple",
-    "url": "./images/apple.png",
+    "pixle": "Rocket",
+    "url": "./images/rocket.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Rocket",
-    "url": "./images/rocket.jpg",
+    "pixle": "Apple",
+    "url": "./images/apple.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
 ]
@@ -19,7 +19,6 @@ const images = [
 
 
 
-let imgWidth;
 
 let currentDate = new Date()
 let currentDateMilli = currentDate.getTime()
@@ -107,24 +106,7 @@ function makeImage() {
 
         let img2 = new Image();
         img2.src = c.toDataURL("image/jpeg");
-        img2.width = 370 + (window.innerHeight - 650)//Math.round(window.outerHeight * 0.56923076923)
-
-        //All of this is for responsive so it works on diff screen sizes
-        imgWidth = 370 + (window.innerHeight - 650)//Math.round(window.outerHeight * 0.56923076923)
-        marginTopForGuess = imgWidth + 10;
-        marginTopForGuess.toString();
-        marginTopForGuess += "px"
-        marginTopForAllGuess = Math.round(window.innerHeight * 0.01846153846)
-        marginTopForAllGuess.toString();
-        marginTopForAllGuess += "px"
-        document.getElementById("g1").style.marginTop = marginTopForGuess;
-        document.getElementById("g2").style.marginTop = marginTopForAllGuess
-        document.getElementById("g3").style.marginTop = marginTopForAllGuess
-        document.getElementById("g4").style.marginTop = marginTopForAllGuess
-        document.getElementById("g5").style.marginTop = marginTopForAllGuess
-        document.getElementById("g6").style.marginTop = marginTopForAllGuess
-
-
+        img2.width = 370;
         img2.setAttribute('id', ("newImg" + imgCount))
         img2.style.position = 'fixed';
         img2.style.top = "170px";
@@ -146,6 +128,7 @@ function makeImage() {
       img1.src = document.getElementById("Pixelated").src;
 }    
 makeImage();
+
 // CODE FOR GUESSES
 function input(e) {
   if (!popupOpen) {
@@ -424,5 +407,4 @@ setInterval(() => {
   let timeUntilNextPixle = `There are ${hour} hours and ${minutes} minutes until the next PIXLE.`;
   timeElement = document.getElementById("timeTillNext")
   timeElement.innerHTML = timeUntilNextPixle
-  console.log(window.outerHeight);
 }, 1000);
