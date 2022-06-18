@@ -1,4 +1,4 @@
-let startingDay = "June 17, 22"
+let startingDay = "June 16, 22"
 
 const images = [
   {
@@ -7,18 +7,41 @@ const images = [
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Rocket",
-    "url": "./images/rocket.png",
+    "pixle": "Cucumber",
+    "url": "./images/cucumber.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
+    "pixle": "Lion",
+    "url": "./images/lion.png",
+    "change": [200, 160, 106, 90, 70, 40],
+  },
+  {
     "pixle": "Rocket",
-    "url": "./images/rocket.jpg",
+    "url": "./images/rocket.png",
+    "change": [101, 90, 74, 67, 53, 37],
+  },
+  {
+    "pixle": "Earth",
+    "url": "./images/earth.jpg",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": "Airplane",
+    "url": "./images/airplane.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": "Coke",
+    "url": "./images/coke.jpg",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": "Egg",
+    "url": "./images/egg.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
 ]
-
-
 
 
 
@@ -111,7 +134,7 @@ function makeImage() {
 
         let img2 = new Image();
         img2.src = c.toDataURL("image/jpeg");
-        img2.width = 350;
+        img2.height = 335;
         img2.setAttribute('id', ("newImg" + imgCount))
         img2.style.position = 'fixed';
         img2.style.top = "170px";

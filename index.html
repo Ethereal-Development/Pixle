@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link id="linkElement" rel="preload" href="./images/rocket.jpg" as="image">
+  <link id="linkElement" rel="preload" href="./images/rocket.png" as="image">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
   </header>
   <hr>
 
-  <div id="holder"><img id="Pixelated" src="./images/rocket.jpg" /></div>
+  <div id="holder"><img id="Pixelated" src="./images/rocket.png" /></div>
 
 
   <div id="popupContainer">
@@ -90,7 +90,7 @@
         <input maximum-scale=1 name="Name" type="text" id="name" placeholder="Name (Optional)">
         <br><br>
 
-        <input maximum-scale=2 name="Email" type="email" id="email" placeholder="Email (Optional: so we can respond to you)">
+        <input maximum-scale=1 name="Email" type="email" id="email" placeholder="Email (Optional: so we can respond to you)">
         <br><br><br><br>
 
         <button onclick="Thankyou()" id="submit" type="submit">Submit</button>
@@ -99,7 +99,7 @@
     </div>
 
     <div id="creatorPopup">
-      <h1 style="display: inline;font-size: 75px;width: 200px;font-family: 'Arial';" >About</h1> <button class="x-button" onclick="xOut(this)"><i id="creatorX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <h1 style="display: inline;font-size: 75px;width: 200px; font-family: 'Arial';" >About</h1> <button class="x-button" onclick="xOut(this)"><i id="creatorX" class="fa fa-times" aria-hidden="true"></i></button> 
       <br>
       <br>
       <br>
@@ -205,6 +205,7 @@
   </div> 
 
   <script defer src="main.js"></script>
+  <!-- <script defer src="findRightPixle.js"></script> Used for finding right pixelation amount -->
   <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="sendEmail.js"></script> -->
 </body>
