@@ -2,13 +2,13 @@ let startingDay = "June 17, 22"
 
 const images = [
   {
-    "pixle": "Rocket",
-    "url": "./images/rocket.jpg",
+    "pixle": "Apple",
+    "url": "./images/apple.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Apple",
-    "url": "./images/apple.png",
+    "pixle": "Rocket",
+    "url": "./images/rocket.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
 ]
