@@ -239,7 +239,7 @@ hr {
   justify-content: center;
 }
 
-#infoPopups h1 {
+#infoPopups h1 :not(#correctAnswerWord) {
   display: inline;
   font-size: 75px;
   width: 200px;
@@ -261,7 +261,7 @@ hr {
   top: 30px
 }
 
-#contactPopup, #creatorPopup, #howToPlayPopup {
+#contactPopup, #creatorPopup, #howToPlayPopup, #howToPlayPopupInfo{
   display: none;
   padding: 20px;
   position: absolute;
@@ -269,6 +269,13 @@ hr {
   z-index: 1;
   background-color: white;
   box-shadow: 10px 10px 100px 20px rgba(0, 0, 0, 0.2);
+}
+
+#howToPlayPopupInfo {
+  width: 750px;
+  height: 1050px;
+  font-family:'Comic Neue', cursive;
+  margin-top: 5%;
 }
 
 #contactPopup {
@@ -365,4 +372,23 @@ hr {
   margin-top: 10%;
   line-height: 1.5;
   display: none;
+}
+
+#imageOnCorrect{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: auto;
+}
+
+#correctAnswerWord {
+  text-align:center;
+  font-size: 75px;
+}
+
+#timeTillNext {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px;
 }

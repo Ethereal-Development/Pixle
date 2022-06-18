@@ -1,12 +1,58 @@
-// GLOBAL VARIABLES
-let pixle = "rocket"
+let startingDay = "June 17, 22"
 
-let sampleSize = 72;
-let increment = 13;
+const images = [
+  {
+    "pixle": "Rocket",
+    "url": "./images/rocket.jpg",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": "Apple",
+    "url": "./images/apple.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+]
+
+
+
+
+
+
+
+
+let currentDate = new Date()
+let currentDateMilli = currentDate.getTime()
+let startDate = new Date(startingDay)
+let startDateMilli = startDate.getTime()
+
+date = Math.floor((currentDateMilli - startDateMilli)/86400000)
+
+// GLOBAL VARIABLES
+
+let pixle = images[date]["pixle"]
+
+let url = images[date]["url"]
+
+let change = images[date]["change"]
+
+var element1 = document.getElementById("linkElement");
+element1.setAttribute("href", url);
+var element2 = document.getElementById("Pixelated");
+element2.setAttribute("src", url);
+var element3 = document.getElementById("imageOnCorrect");
+element3.setAttribute("src", url);
+var element3 = document.getElementById("correctAnswerWord");
+element3.innerHTML = pixle
+
+
+
+let startGuess = 1;
+
+let sampleSize = change[0]
+let increment = -1;
 
 let commonId = "g1" //for 5 letter boxes "gl11"
 let commonSplit = commonId.split("")
-console.log(commonSplit)
 
 let guessArr = []
 let guess;
@@ -22,6 +68,8 @@ let imgHolder = document.getElementById("holder")
 let rowspot = 1;
 let doesWordWork;
 
+let setToFalse = true;
+
 let correctText = document.getElementById("guessedCorrect")
 let invalidGuessText = document.getElementById("invalidGuess")
 let blankGuessText = document.getElementById("blankGuess")
@@ -33,7 +81,7 @@ function makeImage() {
       ctx = c.getContext('2d');
       let img1 = new Image();
       // c.setAttribute('id', "pixImg")
-
+      increment++;
       img1.onload = function () {
         document.getElementById("Pixelated").style.visibility = "none";
         document.getElementById("holder").style.display = "none";
@@ -46,7 +94,7 @@ function makeImage() {
         ctx.drawImage(img1, 0, 0);
 
         var pixelArr = ctx.getImageData(0, 0, w, h).data;
-        sample_size = sampleSize;
+        sample_size = change[increment/2]; //Idk why sample size auto adds two not one so i just divide by two
 
         for (let y = 0; y < h; y += sample_size) {
           for (let x = 0; x < w; x += sample_size) {
@@ -60,7 +108,6 @@ function makeImage() {
         img2.src = c.toDataURL("image/jpeg");
         img2.width = 370;
         img2.setAttribute('id', ("newImg" + imgCount))
-        console.log(imgCount)
         img2.style.position = 'fixed';
         img2.style.top = "170px";
         img2.style.left =  "50%";
@@ -69,15 +116,13 @@ function makeImage() {
 
         document.body.appendChild(img2);
         // imgCount++;
-        console.log(imgCount)
 
         if (imgCount > 0) {
           document.getElementById("newImg" + (imgCount-1)).remove()
-        console.log(imgCount)
 
           // imgCount++
         }
-        console.log(img2)
+
       };
 
       img1.src = document.getElementById("Pixelated").src;
@@ -153,27 +198,50 @@ function check() {
   if (guess.toLowerCase() === pixle.toLowerCase() || guess.toLowerCase() === "adamress" || guess.toLowerCase() === "avinebel") {
     document.getElementById("g"+commonSplit[1]).style.backgroundColor = "rgb(0, 215, 0)";
     correctText.style.display = "initial";
+    setTimeout(function(){
+      document.getElementById("howToPlayPopupInfo").style.display = "initial"
+    }, 1000);
     setTimeout(() => correctText.style.display = 'none', 1000)
     sampleSize = 1
     makeImage();
     alreadyDone = true;
+    setToFalse = false
   } else {
     document.getElementById("g"+commonSplit[1]).style.backgroundColor = "red";
-    sampleSize -= increment
+    sample_size = change[increment];
+    increment++;
     makeImage();
   }
+  // if(startGuess == 6 && alreadyDone == false) {
+  //   document.getElementById("CorrectOrIncorrect").style.color = "red";
+  //   document.getElementById("howToPlayPopupInfo").style.display = "initial"
+  //   // setTimeout(function(){
+  //   //   
+  //   // }, 200);
+  // }
 }
 
+
 function submit() {
+  setToFalse = true
   if (!popupOpen) {
     if (!alreadyDone) {
+      startGuess++
       if (document.getElementById("g"+commonSplit[1]).innerHTML.length > 0) {
         understandGuess();
         check();
+        if(startGuess == 7 && setToFalse == true){
+          setTimeout(function(){
+            document.getElementById("CorrectOrIncorrect").innerHTML = "Incorrect";
+            document.getElementById("CorrectOrIncorrect").style.color = "red" ;
+            document.getElementById("howToPlayPopupInfo").style.display = "initial"
+          }, 300);
+        }
         commonSplit[1]++;
       } else {
         blankGuessText.style.display = "initial";
-        setTimeout(() => blankGuessText.style.display = 'none', 1000)
+        setTimeout(() => blankGuessText.style.display = 'none', 1000);
+        startGuess--;
       }
     }
   }
@@ -319,3 +387,24 @@ const Thankyou = () => {
   document.getElementById("thankyou").style.display = "block"
   document.getElementById("thankyou2").style.display = "block"
 }
+
+//Get time till 12:00 am
+setInterval(() => {
+  let date = new Date() //The current date
+  let time = date.getTime() //The amount of time in milliseconds from Jan 1, 1970 to current date
+  let baseTime = new Date('January 1, 22') //The date Jan 1, 22
+  newPixleTime = baseTime.getTime() //The amount of time in milliseconds from Jan 1, 1970 to Jan 1, 22
+
+  while((newPixleTime - time) < 0){
+      newPixleTime += 86400000 //Keeps adding one day of milliseconds until it gets to current day
+  }
+
+  let timeMilli = (newPixleTime - time)/(1000*60*60);
+
+  let hour = parseInt(timeMilli) -1;
+  let minutes = Math.floor((timeMilli - parseInt(timeMilli)) *60) + 1
+
+  let timeUntilNextPixle = `There are ${hour} hours and ${minutes} minutes until the next PIXLE.`;
+  timeElement = document.getElementById("timeTillNext")
+  timeElement.innerHTML = timeUntilNextPixle
+}, 1000);

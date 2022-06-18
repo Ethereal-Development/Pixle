@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="preload" href="./images/image1.jpg" as="image">
+  <link id="linkElement" rel="preload" href="./images/rocket.jpg" as="image">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
   </header>
   <hr>
 
-  <div id="holder"><img id="Pixelated" src="./images/image1.jpg" /></div>
+  <div id="holder"><img id="Pixelated" src="./images/rocket.jpg" /></div>
 
 
   <div id="popupContainer">
@@ -69,7 +69,7 @@
         <button onclick="sendEmail()" id="submit" type="submit">Submit</button>
       </form> -->
 
-      <h1 id="contactheader">Contact Us</h1> <button class="x-button" onclick="xOut(this)"><i id="contactX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <h1 style="display: inline;font-size: 75px;width: 200px;font-family: 'Arial';" id="contactheader">Contact Us</h1> <button class="x-button" onclick="xOut(this)"><i id="contactX" class="fa fa-times" aria-hidden="true"></i></button> 
       <form id="contactform" action="https://formsubmit.co/ardeasms@gmail.com" method="POST">
         <br><br><br>
 
@@ -99,7 +99,7 @@
     </div>
 
     <div id="creatorPopup">
-      <h1>About</h1> <button class="x-button" onclick="xOut(this)"><i id="creatorX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <h1 style="display: inline;font-size: 75px;width: 200px;font-family: 'Arial';" >About</h1> <button class="x-button" onclick="xOut(this)"><i id="creatorX" class="fa fa-times" aria-hidden="true"></i></button> 
       <br>
       <br>
       <br>
@@ -107,7 +107,7 @@
     </div>
 
     <div id="howToPlayPopup">
-      <h1>How to Play</h1> <button class="x-button" onclick="xOut(this)"><i id="howToPlayX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <h1 style="display: inline;font-size: 75px;width: 200px;font-family: 'Arial';" >How to Play</h1> <button class="x-button" onclick="xOut(this)"><i id="howToPlayX" class="fa fa-times" aria-hidden="true"></i></button> 
       <br>
       <br>
       <br>
@@ -117,8 +117,15 @@
         guess, press enter. Then, the guess will turn green or red depending on if you're right or wrong. Good Luck!
       </p>
     </div>
-  
-
+    <div id="howToPlayPopupInfo"> <!--make javascript function that maeks this popup -->
+      <h1 id="CorrectOrIncorrect" style="font-size: 100px; color: rgb(0, 174, 61)">Correct!</h1> <button class="x-button" onclick="xOut(this)"><i id="howToPlayX" class="fa fa-times" aria-hidden="true"></i></button> 
+      <br><br><br><br><br><br>
+      <h1 id="correctAnswerWord">Rocket</h1>
+      <img id="imageOnCorrect" src="images/rocket.jpg">
+      <br><br>
+      <h1 id="timeTillNext"></h1>
+    </div>
+  </div>
   <!-- <grid> 5 letter guesses
     <div class="letters" id="gl11"></div>
     <div class="letters" id="gl12"></div>
@@ -198,7 +205,6 @@
   </div> 
 
   <script defer src="main.js"></script>
-  <script src="pickImage.js"></script>
   <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="sendEmail.js"></script> -->
 </body>
