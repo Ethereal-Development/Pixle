@@ -107,14 +107,14 @@ function makeImage() {
 
         let img2 = new Image();
         img2.src = c.toDataURL("image/jpeg");
-        img2.width = 370 + (window.outerHeight - 650)//Math.round(window.outerHeight * 0.56923076923)
+        img2.width = 370 + (window.innerHeight - 650)//Math.round(window.outerHeight * 0.56923076923)
 
         //All of this is for responsive so it works on diff screen sizes
-        imgWidth = 370 + (window.outerHeight - 650)//Math.round(window.outerHeight * 0.56923076923)
+        imgWidth = 370 + (window.innerHeight - 650)//Math.round(window.outerHeight * 0.56923076923)
         marginTopForGuess = imgWidth + 10;
         marginTopForGuess.toString();
         marginTopForGuess += "px"
-        marginTopForAllGuess = Math.round(window.outerHeight * 0.01846153846)
+        marginTopForAllGuess = Math.round(window.innerHeight * 0.01846153846)
         marginTopForAllGuess.toString();
         marginTopForAllGuess += "px"
         document.getElementById("g1").style.marginTop = marginTopForGuess;
