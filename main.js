@@ -1,44 +1,49 @@
-let startingDay = "June 16, 22"
+let startingDay = "June 25, 22"
 
 const images = [
   {
-    "pixle": "Apple",
+    "pixle": ["Apple"],
     "url": "./images/apple.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Cucumber",
+    "pixle": ["Cucumber"],
     "url": "./images/cucumber.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Lion",
+    "pixle": ["Lion"],
     "url": "./images/lion.png",
     "change": [200, 160, 106, 90, 70, 40],
   },
   {
-    "pixle": "Rocket",
+    "pixle": ["Rocket", "Spaceship", "Shuttle"],
     "url": "./images/rocket.png",
     "change": [101, 90, 74, 67, 53, 37],
   },
   {
-    "pixle": "Earth",
+    "pixle": ["Earth"],
     "url": "./images/earth.jpg",
-    "change": [78, 65, 52, 39, 26, 13],
+    "change": [130, 95, 69, 55, 45, 37],
   },
   {
-    "pixle": "Airplane",
+    "pixle": ["Airplane", "Plane"],
     "url": "./images/airplane.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Coke",
+    "pixle": ["Coke", "CocaCola"],
     "url": "./images/coke.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": "Egg",
+    "pixle": ["Egg"],
     "url": "./images/egg.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Cruise", "Boat"],
+    "url": "./images/cruise.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
 ]
@@ -63,6 +68,8 @@ let url = images[date]["url"]
 
 let change = images[date]["change"]
 
+let finalGuess;
+
 var element1 = document.getElementById("linkElement");
 element1.setAttribute("href", url);
 var element2 = document.getElementById("Pixelated");
@@ -70,7 +77,7 @@ element2.setAttribute("src", url);
 var element3 = document.getElementById("imageOnCorrect");
 element3.setAttribute("src", url);
 var element3 = document.getElementById("correctAnswerWord");
-element3.innerHTML = pixle
+
 
 
 
@@ -202,6 +209,10 @@ function del() {
 
 function understandGuess() {
   guess = document.getElementById("g"+commonSplit[1]).innerHTML
+  // console.log(guess.toLowerCase());
+  // console.log(lowerCasePixle)
+  // console.log(lowerCasePixle.indexOf(guess.toLowerCase()) > -1);
+
     //FOR 5 LETTERS ------- 
     //guessArr = []
 
@@ -222,13 +233,21 @@ function understandGuess() {
     // }
 }
 
+let lowerCasePixle = []
+
+pixle.forEach(word => {lowerCasePixle.push(word.toLowerCase())})
+
 
 function check() {
-  if (guess.toLowerCase() === pixle.toLowerCase() || guess.toLowerCase() === "adamress" || guess.toLowerCase() === "avinebel") {
+  if (lowerCasePixle.indexOf(guess.toLowerCase()) > -1 || guess.toLowerCase() === "adamress" || guess.toLowerCase() === "avinebel") {
+    finalGuess = guess.toLowerCase();
+    finalGuess = finalGuess[0].toUpperCase() + finalGuess.substring(1);;
+    element3.innerHTML = finalGuess;
     document.getElementById("g"+commonSplit[1]).style.backgroundColor = "rgb(0, 215, 0)";
     correctText.style.display = "initial";
     setTimeout(function(){
       document.getElementById("howToPlayPopupInfo").style.display = "initial"
+      popupOpen = true;
     }, 1000);
     setTimeout(() => correctText.style.display = 'none', 1000)
     sampleSize = 1
@@ -236,6 +255,8 @@ function check() {
     alreadyDone = true;
     setToFalse = false
   } else {
+    finalGuess = pixle[0]
+    element3.innerHTML = finalGuess;
     document.getElementById("g"+commonSplit[1]).style.backgroundColor = "red";
     sample_size = change[increment];
     increment++;

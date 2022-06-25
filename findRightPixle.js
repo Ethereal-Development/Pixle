@@ -1,4 +1,4 @@
-let imgUrl = "./images/rocket.png";
+let imgUrl = "./images/cruise.png";
 
 // Above you can picke the image that you want to see all the possible 
 //pixles for then yuo can use that to decide what you want. I recommend that you record it on 
@@ -9,7 +9,7 @@ let imgUrl = "./images/rocket.png";
 
 
 
-
+uju
 
 var element1 = document.getElementById("linkElement");
 element1.setAttribute("href", imgUrl);
