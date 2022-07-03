@@ -1,4 +1,4 @@
-let startingDay = "June 25, 22"
+// let startingDay = "June 25, 22"
 
 const images = [
   {
@@ -53,20 +53,25 @@ const images = [
 
 
 
-let currentDate = new Date()
-let currentDateMilli = currentDate.getTime()
-let startDate = new Date(startingDay)
-let startDateMilli = startDate.getTime()
+// let currentDate = new Date()
+// let currentDateMilli = currentDate.getTime()
+// let startDate = new Date(startingDay)
+// let startDateMilli = startDate.getTime()
 
-date = Math.floor((currentDateMilli - startDateMilli)/86400000)
+// date = Math.floor((currentDateMilli - startDateMilli)/86400000)
 
-// GLOBAL VARIABLES
+// // GLOBAL VARIABLES
 
-let pixle = images[date]["pixle"]
+// let pixle = images[date]["pixle"]
 
-let url = images[date]["url"]
+// let url = images[date]["url"]
 
-let change = images[date]["change"]
+// let change = images[date]["change"]
+
+let pixle = images[3]["pixle"]
+let url = images[3]["url"]
+let change = images[3]["change"]
+
 
 let finalGuess;
 
