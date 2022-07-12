@@ -46,6 +46,26 @@ const images = [
     "url": "./images/cruise.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
+  {
+    "pixle": ["Salad"],
+    "url": "./images/salad.png",
+    "change": [66, 53, 48, 41, 31, 21],
+  },
+  {
+    "pixle": ["Car", "Sedan"],
+    "url": "./images/car.jpg",
+    "change": [48, 40, 26, 18, 15, 10],
+  },
+  {
+    "pixle": ["Cookie"],
+    "url": "./images/cookie.jpg",
+    "change": [135, 116, 89, 78, 61, 36],
+  },
+  // {
+  //   "pixle": ["Basketball"],
+  //   "url": "./images/basketball.jpeg",
+  //   "change": [101, 83, 67, 47, 35, 27],
+  // },
 ]
 
 
@@ -71,6 +91,10 @@ const images = [
 let pixle = images[3]["pixle"]
 let url = images[3]["url"]
 let change = images[3]["change"]
+
+// let pixle = images[images.length-1]["pixle"]
+// let url = images[images.length-1]["url"]
+// let change = images[images.length-1]["change"]
 
 
 let finalGuess;
