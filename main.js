@@ -1,4 +1,4 @@
-// let startingDay = "June 25, 22"
+let startingDay = "July 19, 22"
 
 const images = [
   {
@@ -61,37 +61,39 @@ const images = [
     "url": "./images/cookie.jpg",
     "change": [135, 116, 89, 78, 61, 36],
   },
-  // {
-  //   "pixle": ["Basketball"],
-  //   "url": "./images/basketball.jpeg",
-  //   "change": [101, 83, 67, 47, 35, 27],
-  // },
+  {
+    "pixle": ["Basketball"],
+    "url": "./images/basketball.jpeg",
+    "change": [101, 83, 67, 47, 35, 27],
+  },
 ]
 
+//dog and cat from adam? need pixel values if so
 
 
 
+// CODE FOR DAILY IMAGES
+let currentDate = new Date()
+let currentDateMilli = currentDate.getTime()
+let startDate = new Date(startingDay)
+let startDateMilli = startDate.getTime()
 
+date = Math.floor((currentDateMilli - startDateMilli)/86400000)
 
-// let currentDate = new Date()
-// let currentDateMilli = currentDate.getTime()
-// let startDate = new Date(startingDay)
-// let startDateMilli = startDate.getTime()
+// GLOBAL VARIABLES
 
-// date = Math.floor((currentDateMilli - startDateMilli)/86400000)
+let pixle = images[date]["pixle"]
 
-// // GLOBAL VARIABLES
+let url = images[date]["url"]
 
-// let pixle = images[date]["pixle"]
+let change = images[date]["change"]
 
-// let url = images[date]["url"]
+// CODE FOR ONLY ROCKET
+// let pixle = images[3]["pixle"]
+// let url = images[3]["url"]
+// let change = images[3]["change"]
 
-// let change = images[date]["change"]
-
-let pixle = images[3]["pixle"]
-let url = images[3]["url"]
-let change = images[3]["change"]
-
+// CODE FOR MOST RECENT IMAGE TESTING
 // let pixle = images[images.length-1]["pixle"]
 // let url = images[images.length-1]["url"]
 // let change = images[images.length-1]["change"]
