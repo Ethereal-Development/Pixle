@@ -22,11 +22,6 @@ const images = [
     "change": [101, 90, 74, 67, 53, 37],
   },
   {
-    "pixle": ["Earth"],
-    "url": "./images/earth.jpg",
-    "change": [130, 95, 69, 55, 45, 37],
-  },
-  {
     "pixle": ["Airplane", "Plane"],
     "url": "./images/airplane.png",
     "change": [78, 65, 52, 39, 26, 13],
