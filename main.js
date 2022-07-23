@@ -137,11 +137,11 @@ date = Math.floor((currentDateMilli - startDateMilli)/86400000)
 
 // GLOBAL VARIABLES
 
-// let pixle = images[date]["pixle"]
+let pixle = images[date]["pixle"]
 
-// let url = images[date]["url"]
+let url = images[date]["url"]
 
-// let change = images[date]["change"]
+let change = images[date]["change"]
 
 // CODE FOR ONLY ROCKET
 // let pixle = images[3]["pixle"]
@@ -149,9 +149,9 @@ date = Math.floor((currentDateMilli - startDateMilli)/86400000)
 // let change = images[3]["change"]
 
 // CODE FOR MOST RECENT IMAGE TESTING
-let pixle = images[images.length-1]["pixle"]
-let url = images[images.length-1]["url"]
-let change = images[images.length-1]["change"]
+// let pixle = images[images.length-1]["pixle"]
+// let url = images[images.length-1]["url"]
+// let change = images[images.length-1]["change"]
 
 
 let finalGuess;
