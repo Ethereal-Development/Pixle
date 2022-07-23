@@ -12,24 +12,14 @@ const images = [
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": ["Lion"],
-    "url": "./images/lion.png",
-    "change": [200, 160, 106, 90, 70, 40],
-  },
-  {
     "pixle": ["Rocket", "Spaceship", "Shuttle"],
     "url": "./images/rocket.png",
     "change": [101, 90, 74, 67, 53, 37],
   },
   {
-    "pixle": ["Earth"],
-    "url": "./images/earth.jpg",
-    "change": [130, 95, 69, 55, 45, 37],
-  },
-  {
-    "pixle": ["Airplane", "Plane"],
-    "url": "./images/airplane.png",
-    "change": [78, 65, 52, 39, 26, 13],
+    "pixle": ["Lion"],
+    "url": "./images/lion.png",
+    "change": [200, 160, 106, 90, 70, 40],
   },
   {
     "pixle": ["Coke", "CocaCola"],
@@ -37,12 +27,17 @@ const images = [
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": ["Egg"],
+    "pixle": ["Airplane", "Plane"],
+    "url": "./images/airplane.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Egg", "Eggs"],
     "url": "./images/egg.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": ["Cruise", "Boat"],
+    "pixle": ["Cruise", "Boat", "Cruiseship", "Ship"],
     "url": "./images/cruise.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
