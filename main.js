@@ -17,6 +17,11 @@ const images = [
     "change": [101, 90, 74, 67, 53, 37],
   },
   {
+    "pixle": ["Airplane", "Plane"],
+    "url": "./images/airplane.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
     "pixle": ["Lion"],
     "url": "./images/lion.png",
     "change": [200, 160, 106, 90, 70, 40],
@@ -24,11 +29,6 @@ const images = [
   {
     "pixle": ["Coke", "CocaCola"],
     "url": "./images/coke.jpg",
-    "change": [78, 65, 52, 39, 26, 13],
-  },
-  {
-    "pixle": ["Airplane", "Plane"],
-    "url": "./images/airplane.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
