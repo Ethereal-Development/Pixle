@@ -12,9 +12,19 @@ const images = [
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
+    "pixle": ["Lion"],
+    "url": "./images/lion.png",
+    "change": [200, 160, 106, 90, 70, 40],
+  },
+  {
     "pixle": ["Rocket", "Spaceship", "Shuttle"],
     "url": "./images/rocket.png",
     "change": [101, 90, 74, 67, 53, 37],
+  },
+  {
+    "pixle": ["Earth"],
+    "url": "./images/earth.jpg",
+    "change": [130, 95, 69, 55, 45, 37],
   },
   {
     "pixle": ["Airplane", "Plane"],
@@ -22,22 +32,17 @@ const images = [
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": ["Lion"],
-    "url": "./images/lion.png",
-    "change": [200, 160, 106, 90, 70, 40],
-  },
-  {
-    "pixle": ["Coke", "CocaCola"],
+    "pixle": ["Coke", "CocaCola", "Soda", "Pop"],
     "url": "./images/coke.jpg",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": ["Egg", "Eggs"],
+    "pixle": ["Egg"],
     "url": "./images/egg.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
-    "pixle": ["Cruise", "Boat", "Cruiseship", "Ship"],
+    "pixle": ["Cruise", "Boat"],
     "url": "./images/cruise.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
@@ -61,6 +66,61 @@ const images = [
     "url": "./images/basketball.jpeg",
     "change": [101, 83, 67, 47, 35, 27],
   },
+  {
+    "pixle": ["Headphones", "Beats"],
+    "url": "./images/headphones.jpg",
+    "change": [40, 32, 31, 29, 22, 20], 
+  },
+  {
+    "pixle": ["Camera"],
+    "url": "./images/camera.jpg",
+    "change": [107, 85, 77, 66, 58, 43], 
+  },
+  {
+    "pixle": ["Waterbottle", "Water", "Bottle"],
+    "url": "./images/water bottle.jpg",
+    "change": [150, 129, 105, 97, 85, 77], 
+  },
+  {
+    "pixle": ["Guitar"],
+    "url": "./images/guitar.png",
+    "change": [153, 119, 98, 81, 75, 63], 
+  },
+  {
+    "pixle": ["Scissors"], //adam vetoes
+    "url": "./images/scissors.jpg",
+    "change": [105, 62, 52, 48, 39, 31], 
+  },
+  {
+    "pixle": ["Donut", "Doughnut"],
+    "url": "./images/donut.jpg",
+    "change": [262, 231, 194, 172, 145, 118], 
+  },
+  {
+    "pixle": ["Skyscraper"],
+    "url": "./images/skyscraper.jpg",
+    "change": [204, 115, 93, 77, 52, 24],
+  },
+  {
+    "pixle": ["Bread", "Loaf"],
+    "url": "./images/bread.jpg",
+    "change": [484, 335, 285, 219, 161, 120], 
+  },
+  {
+    "pixle": ["Lightning", "Bolt", "Lightningbolt"],
+    "url": "./images/lightning.png",
+    "change": [51, 37, 33, 24, 23, 21],
+  },
+  {
+    "pixle": ["Carrot"],
+    "url": "./images/carrot.jpg",
+    "change": [156, 143, 130, 105, 96, 85],
+  },
+  // {
+  //   "pixle": ["Cat"], //debatable pictyure, adam its up to you to include
+  //   "url": "./images/cat.jpg",
+  //   "change": [204, 115, 93, 77, 52, 24], //needs values
+  // },
 ]
 
 //dog and cat from adam? need pixel values if so
@@ -77,11 +137,11 @@ date = Math.floor((currentDateMilli - startDateMilli)/86400000)
 
 // GLOBAL VARIABLES
 
-let pixle = images[date]["pixle"]
+// let pixle = images[date]["pixle"]
 
-let url = images[date]["url"]
+// let url = images[date]["url"]
 
-let change = images[date]["change"]
+// let change = images[date]["change"]
 
 // CODE FOR ONLY ROCKET
 // let pixle = images[3]["pixle"]
@@ -89,9 +149,9 @@ let change = images[date]["change"]
 // let change = images[3]["change"]
 
 // CODE FOR MOST RECENT IMAGE TESTING
-// let pixle = images[images.length-1]["pixle"]
-// let url = images[images.length-1]["url"]
-// let change = images[images.length-1]["change"]
+let pixle = images[images.length-1]["pixle"]
+let url = images[images.length-1]["url"]
+let change = images[images.length-1]["change"]
 
 
 let finalGuess;

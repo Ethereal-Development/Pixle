@@ -1,4 +1,4 @@
-let imgUrl = "./images/basketball.jpeg";
+let imgUrl = "./images/cat.jpg";
 
 // Above you can picke the image that you want to see all the possible 
 //pixles for then yuo can use that to decide what you want. I recommend that you record it on 
