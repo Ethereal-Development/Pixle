@@ -1,4 +1,4 @@
-let startingDay = "July 19, 22"
+let startingDay = "August 3, 22"
 
 const images = [
   {
@@ -22,13 +22,23 @@ const images = [
     "change": [101, 90, 74, 67, 53, 37],
   },
   {
-    "pixle": ["Airplane", "Plane"],
-    "url": "./images/airplane.png",
-    "change": [78, 65, 52, 39, 26, 13],
+    "pixle": ["Car", "Sedan"],
+    "url": "./images/car.jpg",
+    "change": [48, 40, 26, 18, 15, 10],
+  },
+  {
+    "pixle": ["Donut", "Doughnut"],
+    "url": "./images/donut.jpg",
+    "change": [262, 231, 194, 172, 145, 118], 
   },
   {
     "pixle": ["Coke", "CocaCola", "Soda", "Pop"],
     "url": "./images/coke.jpg",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Airplane", "Plane"],
+    "url": "./images/airplane.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
@@ -45,11 +55,6 @@ const images = [
     "pixle": ["Salad"],
     "url": "./images/salad.png",
     "change": [66, 53, 48, 41, 31, 21],
-  },
-  {
-    "pixle": ["Car", "Sedan"],
-    "url": "./images/car.jpg",
-    "change": [48, 40, 26, 18, 15, 10],
   },
   {
     "pixle": ["Cookie"],
@@ -85,11 +90,6 @@ const images = [
     "pixle": ["Scissors"], //adam vetoes
     "url": "./images/scissors.jpg",
     "change": [105, 62, 52, 48, 39, 31], 
-  },
-  {
-    "pixle": ["Donut", "Doughnut"],
-    "url": "./images/donut.jpg",
-    "change": [262, 231, 194, 172, 145, 118], 
   },
   {
     "pixle": ["Skyscraper"],
