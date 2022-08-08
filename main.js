@@ -1,11 +1,6 @@
-let startingDay = "August 3, 22"
+let startingDay = "August 7, 22"
 
 const images = [
-  {
-    "pixle": ["Apple"],
-    "url": "./images/apple.png",
-    "change": [78, 65, 52, 39, 26, 13],
-  },
   {
     "pixle": ["Cucumber"],
     "url": "./images/cucumber.jpg",
@@ -49,6 +44,11 @@ const images = [
   {
     "pixle": ["Cruise", "Boat"],
     "url": "./images/cruise.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Apple"],
+    "url": "./images/apple.png",
     "change": [78, 65, 52, 39, 26, 13],
   },
   {
