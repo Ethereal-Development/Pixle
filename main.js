@@ -1,4 +1,4 @@
-let startingDay = "August 24, 22"
+let startingDay = "November 7, 22"
 
 const images = [
   {
@@ -123,6 +123,8 @@ const images = [
 
 
 // CODE FOR DAILY IMAGES
+
+
 let currentDate = new Date()
 let currentDateMilli = currentDate.getTime()
 let startDate = new Date(startingDay)
@@ -131,7 +133,6 @@ let startDateMilli = startDate.getTime()
 date = Math.floor((currentDateMilli - startDateMilli)/86400000)
 
 // GLOBAL VARIABLES
-
 let pixle = images[date]["pixle"]
 
 let url = images[date]["url"]
