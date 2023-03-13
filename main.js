@@ -1,4 +1,4 @@
-let startingDay = "February 23, 23"
+let startingDay = "March 11, 23"
 
 const images = [
   {
