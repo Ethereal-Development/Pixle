@@ -1760,6 +1760,116 @@ const images = [
     "pixle": ["Carrot"],
     "url": "./images/carrot.jpg",
     "change": [156, 143, 130, 105, 96, 85],
+  },
+  {
+    "pixle": ["Cucumber"],
+    "url": "./images/cucumber.jpg",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Lion"],
+    "url": "./images/lion.png",
+    "change": [200, 160, 106, 90, 70, 40],
+  },
+  {
+    "pixle": ["Rocket", "Spaceship", "Shuttle"],
+    "url": "./images/rocket.png",
+    "change": [101, 90, 74, 67, 53, 37],
+  },
+  {
+    "pixle": ["Car", "Sedan"],
+    "url": "./images/car.jpg",
+    "change": [48, 40, 26, 18, 15, 10],
+  },
+  {
+    "pixle": ["Donut", "Doughnut"],
+    "url": "./images/donut.jpg",
+    "change": [262, 231, 194, 172, 145, 118], 
+  },
+  {
+    "pixle": ["Coke", "CocaCola", "Soda", "Pop"],
+    "url": "./images/coke.jpg",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Airplane", "Plane"],
+    "url": "./images/airplane.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Egg"],
+    "url": "./images/egg.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Cruise", "Boat"],
+    "url": "./images/cruise.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Apple"],
+    "url": "./images/apple.png",
+    "change": [78, 65, 52, 39, 26, 13],
+  },
+  {
+    "pixle": ["Salad"],
+    "url": "./images/salad.png",
+    "change": [66, 53, 48, 41, 31, 21],
+  },
+  {
+    "pixle": ["Cookie"],
+    "url": "./images/cookie.jpg",
+    "change": [135, 116, 89, 78, 61, 36],
+  },
+  {
+    "pixle": ["Basketball"],
+    "url": "./images/basketball.jpeg",
+    "change": [101, 83, 67, 47, 35, 27],
+  },
+  {
+    "pixle": ["Headphones", "Beats"],
+    "url": "./images/headphones.jpg",
+    "change": [40, 32, 31, 29, 22, 20], 
+  },
+  {
+    "pixle": ["Camera"],
+    "url": "./images/camera.jpg",
+    "change": [107, 85, 77, 66, 58, 43], 
+  },
+  {
+    "pixle": ["Waterbottle", "Water", "Bottle"],
+    "url": "./images/water bottle.jpg",
+    "change": [150, 129, 105, 97, 85, 77], 
+  },
+  {
+    "pixle": ["Guitar"],
+    "url": "./images/guitar.png",
+    "change": [153, 119, 98, 81, 75, 63], 
+  },
+  {
+    "pixle": ["Scissors"], //adam vetoes
+    "url": "./images/scissors.jpg",
+    "change": [105, 62, 52, 48, 39, 31], 
+  },
+  {
+    "pixle": ["Skyscraper"],
+    "url": "./images/skyscraper.jpg",
+    "change": [204, 115, 93, 77, 52, 24],
+  },
+  {
+    "pixle": ["Bread", "Loaf"],
+    "url": "./images/bread.jpg",
+    "change": [484, 335, 285, 219, 161, 120], 
+  },
+  {
+    "pixle": ["Lightning", "Bolt", "Lightningbolt"],
+    "url": "./images/lightning.png",
+    "change": [51, 37, 33, 24, 23, 21],
+  },
+  {
+    "pixle": ["Carrot"],
+    "url": "./images/carrot.jpg",
+    "change": [156, 143, 130, 105, 96, 85],
   }
   // {
   //   "pixle": ["Cat"], //debatable pictyure, adam its up to you to include
