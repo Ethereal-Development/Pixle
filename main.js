@@ -120,7 +120,7 @@ let currentDateMilli = currentDate.getTime()
 let startDate = new Date(startingDay)
 let startDateMilli = startDate.getTime()
 
-date = Math.floor((currentDateMilli - startDateMilli)/86400000)
+date = Math.floor((currentDateMilli - startDateMilli) / 86400000) % images.length
 
 // GLOBAL VARIABLES
 let pixle = images[date]["pixle"]
