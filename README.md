@@ -4,7 +4,7 @@
 Pixle is a web-based game inspired by Wordle, designed to be fun and simple for all ages. Players are presented with a pixelated image and must guess what it is. With each incorrect guess, the image becomes clearer. A new image shows up every 24 hours, and the game is optimized for phone use.
 
 ## How to Play
-1. Visit [Pixle Game](https://pixlegame.com/).
+1. Visit [Pixle](https://pixlegame.com/) (pixlegame.com).
 2. Observe the pixelated image at the top of the screen.
 3. Type your guess in the input box and press enter.
 4. The image becomes less pixelated with each incorrect guess.
